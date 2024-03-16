@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install unittest2
-        run: pip install unittest2
-      - name: Test with unittest
+      - name: Install pytest
+        run: pip install pytest
+      - name: Test with pytest
         run: pytest test.py
