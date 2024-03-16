@@ -26,4 +26,4 @@ jobs:
       - name: Install unittest2
         run: pip install unittest2
       - name: Test with unittest
-        run: unittest.py
+        run: pytest test.py
