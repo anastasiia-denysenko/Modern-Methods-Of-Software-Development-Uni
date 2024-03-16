@@ -1,4 +1,4 @@
-import unittest2
+import ../dumb_code_denysenko.py
 def test_function1():
     assert dumb_function(1) == "correct"
 
