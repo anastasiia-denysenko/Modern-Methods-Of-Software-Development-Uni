@@ -1,4 +1,4 @@
-import function1, function2 from dumb_code_denysenko.py
+import dumb_code_denysenko.py
 def test_function1():
     assert dumb_function(1) == "correct"
 
