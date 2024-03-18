@@ -25,5 +25,7 @@ jobs:
 
       - name: Install pytest
         run: pip install pytest
-      - name: Test with pytest
+      - name: Test with pytest (success)
         run: pytest test.py
+      - name: Test with pytest (failure)
+        run: pytest test_failure.py
