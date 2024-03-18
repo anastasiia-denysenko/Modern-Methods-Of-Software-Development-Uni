@@ -28,4 +28,4 @@ jobs:
       - name: Test with pytest (success)
         run: pytest test.py
       - name: Test with pytest (failure)
-        run: pytest test_failure.py
+        run: pytest test_faliure.py
