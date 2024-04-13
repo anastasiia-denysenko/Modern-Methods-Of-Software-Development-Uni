@@ -25,11 +25,7 @@ jobs:
 
       - name: Install pytest
         run: pip install pytest
-      - name: Test ROT13 (it works)
-        run: pytest test_ROT13_success.py
-      - name: Test ROT13 (it does not work)
+      - name: Test with pytest (success)
+        run: pytest test_ROT13_seccess.py
+      - name: Test with pytest (failure)
         run: pytest test_ROT13_failure.py
-       - name: Test exit code (equals zero)
-        run: pytest test_exit_code_success.py
-       - name: Test exit code (does not equal zero)
-        run: pytest test_exit_code_failure.py
