@@ -26,6 +26,6 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Test with pytest (success)
-        run: pytest test.py
+        run: pytest lab_1/test.py
       - name: Test with pytest (failure)
-        run: pytest test_faliure.py
+        run: pytest lab_1/test_faliure.py
