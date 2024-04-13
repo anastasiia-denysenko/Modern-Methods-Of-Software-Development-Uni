@@ -1,3 +1,3 @@
-import denysenko_ROT13 as rot
-def exit_code():
-    assert rot.code == 0
+from denysenko_ROT13 import ROT13, test, code
+def exit_code_zero(self):
+    assert self.assertEqual(code, 0) 
