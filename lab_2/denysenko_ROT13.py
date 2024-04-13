@@ -32,7 +32,7 @@ def test():
     else:
         return "incorrect"
         exit(1)
-def stdin_stderr():
+def stdout_stderr():
     if test() == "correct":
         temp = sys.stdout                        
         sys.stdout = open('ouput.txt', 'w')
@@ -42,7 +42,7 @@ def stdin_stderr():
         sys.stdout = temp
     else:
         sys.stderr.write(f"The function does not work\n")
-stdin_stderr()
+stdout_stderr()
 if __name__ == '__main__':
     test_process = Process(target=test)
     test_process.start()
