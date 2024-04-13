@@ -33,9 +33,7 @@ def test():
     else:
         return "incorrect"
         exit(1)
-if test() == "correct":
-    pass
-else:
+if test() == "incorrect":
     print("An error occured", file=sys.stderr)
 if __name__ == '__main__':
     test_process = Process(target=test)
