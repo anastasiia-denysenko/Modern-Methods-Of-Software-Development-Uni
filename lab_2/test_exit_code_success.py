@@ -1,3 +1,3 @@
-from denysenko_ROT13 import ROT13, test, code
+import denysenko_ROT13 as rot
 def exit_code():
-    assert code == 0
+    assert rot.code == 0
