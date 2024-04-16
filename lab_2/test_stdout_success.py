@@ -10,5 +10,5 @@ def stdout_stderr(self, string_input, expection_stdout, expection_stderr):
             result = subprocess.run(["python", "lab2/denysenko_ROT13.py"], input=string_input, text=True, capture_output=True)
         captured_stdout = result.stdout
         captured_stderr = result.stderr
-    assert captured_stdout == output
-    assert captured_stderr == ""
+    self.assertEqual(captured_stdout, output)
+    self.assertEqual(captured_stderr, "")
