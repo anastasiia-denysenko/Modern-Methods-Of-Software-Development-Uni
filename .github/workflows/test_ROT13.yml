@@ -38,6 +38,4 @@ jobs:
       - name: Test stdin (it does not work)
         run: pytest lab_2/test_stdin_failure.py
       - name: Test stdout (it works)
-        run: pytest lab_2/test_stdout_success.py
-      - name: Test stdout (it does not work)
-        run: pytest lab_2/test_stdout_failure.py
+        run: pytest lab_2/test_stdout_stderr.py
