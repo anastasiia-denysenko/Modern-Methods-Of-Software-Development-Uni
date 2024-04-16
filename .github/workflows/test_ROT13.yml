@@ -1,3 +1,4 @@
+
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
@@ -33,3 +34,5 @@ jobs:
         run: pytest lab_2/test_exit_code_success.py
       - name: Test ROT13 (it does not equal 0)
         run: pytest lab_2/test_exit_code_failure.py
+      - name: Test stdin (it works)
+        run: pytest lab_2/test_stdin_success.py
