@@ -1,4 +1,4 @@
-from denysenko_ROT13 import input, sys.stdin 
+import  denysenko_ROT13 as rot
 import sys
 def test_stdin():
-    assert input == sys.stdin.read()
+    assert rot.input == rot.sys.stdin.read()
