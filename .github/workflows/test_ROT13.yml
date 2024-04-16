@@ -36,3 +36,5 @@ jobs:
         run: pytest lab_2/test_exit_code_failure.py
       - name: Test stdin (it works)
         run: pytest lab_2/test_stdin_success.py
+      - name: Test stdin (it does not work)
+        run: pytest lab_2/test_stdin_failure.py
