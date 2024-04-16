@@ -32,17 +32,14 @@ def test():
     else:
         return "incorrect"
         exit(1)
-def stdout_stderr():
+if __name__ == '__main__':
     if test() == "correct":
-        temp = sys.stdout                        
-        sys.stdout = open('ouput.txt', 'w')
-        print(ROT13(input))
-        print(ROT13(ROT13(input)))
-        sys.stdout.close()
-        sys.stdout = temp
+        var = sys.stdout 
+        arr = [input] 
+        for i in arr: 
+            var.write(ROT13(j)+'\n')
     else:
         sys.stderr.write(f"The function does not work\n")
-stdout_stderr()
 if __name__ == '__main__':
     test_process = Process(target=test)
     test_process.start()
