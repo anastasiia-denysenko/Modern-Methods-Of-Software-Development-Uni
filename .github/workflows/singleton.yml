@@ -24,4 +24,4 @@ jobs:
       run:
         python -m pip install --upgrade pip
     - name: Test singleton
-      run: /lab_3/test_singleton.py
+      run: lab_3/test_singleton.py
