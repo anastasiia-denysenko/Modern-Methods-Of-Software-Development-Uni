@@ -29,3 +29,5 @@ class TestStdoutStderr(unittest.TestCase):
     def test_stderr(self, mockStdout):
         self.TestROT13.test_exit_code()
         mockStdout.assert_not_called()
+if __name__ == '__main__':
+    unittest.main()
