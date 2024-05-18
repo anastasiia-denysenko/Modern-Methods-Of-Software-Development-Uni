@@ -23,19 +23,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install pytest
-        run: pip install pytest
-      - name: Test ROT13 (it works)
-        run: pytest lab_2/test_ROT13_success.py
-      - name: Test ROT13 (it does not work)
-        run: pytest lab_2/test_ROT13_failure.py
-      - name: Test exit code (it equals 0)
-        run: pytest lab_2/test_exit_code_success.py
-      - name: Test ROT13 (it does not equal 0)
-        run: pytest lab_2/test_exit_code_failure.py
-      - name: Test stdin (it works)
-        run: pytest lab_2/test_stdin_success.py
-      - name: Test stdin (it does not work)
-        run: pytest lab_2/test_stdin_failure.py
-      - name: Test stdout (it works)
-        run: pytest lab_2/test_stdout_stderr.py
+      - name: Install mock
+        run: pip install mock
+      - name: Test ROT13
+        run: lab_2/ROT_13_test.py
