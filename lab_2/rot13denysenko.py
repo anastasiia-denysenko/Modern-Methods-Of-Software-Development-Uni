@@ -25,8 +25,7 @@ def otput_rot13(s:str):
     m = ROT_13()
     if (m.ROT13(m.ROT13(s))) == s:
         sys.stderr.write("Starting process...\n")
-        sys.stdout.write("The output is: ")
-        sys.stdout.write(m.ROT13(s))
+        sys.stdout.write("The output is: {i}".format(i=m.ROT13(s)))
         sys.exit(0)
     else:
         sys.stderr.write("Process terminated: function does not work.")
