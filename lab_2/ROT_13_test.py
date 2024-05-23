@@ -13,4 +13,4 @@ class Test_ROT13(TestCase):
         self.assertEqual(e.type, SystemExit)
         self.assertEqual(e.value.code, 0)
 if __name__ == '__main__':
-    pytest.main()
+    pytest.main(Test_ROT13)
