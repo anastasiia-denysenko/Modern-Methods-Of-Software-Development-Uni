@@ -12,3 +12,5 @@ class Test_ROT13(TestCase):
             otput_rot13("Hello world!")
         self.assertEqual(e.type, SystemExit)
         self.assertEqual(e.value.code, 0)
+if __name__ == '__main__':
+    pytest.main()
