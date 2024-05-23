@@ -9,6 +9,6 @@ class Test_ROT13(TestCase):
         self.assertEqual(captured.err, "Starting process...\n")
     def test_exit_code(ROT_13.ROT13("Hello world!")):
         with pytest.raises(SystemExit) as e:
-            ROT_13.ROT13("Hello world!")
+            otput_rot13("Hello world!")
         self.assertEqual(e.type, SystemExit)
         self.assertEqual(e.value.code, 0)
