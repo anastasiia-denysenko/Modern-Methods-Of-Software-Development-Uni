@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-#include "test_ref_and_var.h"
+#include "ref_and_var.h"
 using std::cout;
 int main()
 {
