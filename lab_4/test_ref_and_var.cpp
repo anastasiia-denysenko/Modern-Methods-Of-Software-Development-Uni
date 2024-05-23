@@ -1,8 +1,8 @@
-# include <assert.h>
+#include <assert.h>
 #include <iostream>
 #include <cassert>
+#include ref_and_var
 #define assertm(exp, msg) assert(((void)msg, exp))
-
 int main()
 {
     ref_and_point_zero rp_zero;
