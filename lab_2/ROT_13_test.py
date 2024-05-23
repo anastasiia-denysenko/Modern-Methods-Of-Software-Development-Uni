@@ -1,13 +1,14 @@
 import rot13denysenko
 from pytest import *
 import sys
-def test_stdout_stderr(capsys):
-    otput_rot13("Hello world!")
-    captured = capsys.readouterr()
-    assert captured.out == "The output is: Uryyb jbeyq!"
-    assert captured.err == "Starting process...\n"
-def test_exit_code(ROT_13.ROT13("Hello world!")):
-    with pytest.raises(SystemExit) as e:
-        ROT_13.ROT13("Hello world!")
-    assert e.type == SystemExit
-    assert e.value.code == 0
+class Test_ROT13(TestCase):
+    def test_stdout_stderr(capsys):
+        otput_rot13("Hello world!")
+        captured = capsys.readouterr()
+        self.assertEqual(captured.out, "The output is: Uryyb jbeyq!")
+        self.assertEqual(captured.err, "Starting process...\n")
+    def test_exit_code(ROT_13.ROT13("Hello world!")):
+        with pytest.raises(SystemExit) as e:
+            ROT_13.ROT13("Hello world!")
+        self.assertEqual(e.type, SystemExit)
+        self.assertEqual(e.value.code, 0)
