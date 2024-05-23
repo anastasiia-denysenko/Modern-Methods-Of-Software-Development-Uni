@@ -16,6 +16,6 @@ jobs:
     - name: compile tests
       run: make test CXX=g++
     - name: run main
-      run: make lab_4\main.cpp
+      run: lab_4\main.cpp
     - name: run a.exe
-      run: make lab_4\a.exe
+      run: lab_4\a.exe
