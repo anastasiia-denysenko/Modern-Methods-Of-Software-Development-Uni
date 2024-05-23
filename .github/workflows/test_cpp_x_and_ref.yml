@@ -9,11 +9,13 @@ on:
 jobs:
   build-and-test:
 
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     steps:
     - uses: actions/checkout@v2
+    - name: compile tests
+      run: make test CXX=g++
     - name: run main
-      run: lab_4\main.cpp
+      run: make lab_4\main.cpp
     - name: run a.exe
-      run: lab_4\a.exe
+      run: make lab_4\a.exe
