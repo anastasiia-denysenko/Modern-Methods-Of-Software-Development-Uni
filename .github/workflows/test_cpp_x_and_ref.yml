@@ -13,4 +13,4 @@ jobs:
 
     steps:
     - name: test x_and_ref
-      run: /lab_4/test_x_and_ref.cpp
+      run: lab_4/test_x_and_ref.cpp
