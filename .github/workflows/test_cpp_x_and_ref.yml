@@ -12,5 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - name: test x_and_ref
       run: lab_4/test_x_and_ref.cpp
