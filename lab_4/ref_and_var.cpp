@@ -1,4 +1,3 @@
-
 class ref_and_point_zero
 {
     public:
