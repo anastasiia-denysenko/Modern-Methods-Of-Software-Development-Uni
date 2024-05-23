@@ -1,5 +1,4 @@
 #include <iostream>
-#include <assert.h>
 using std::cout;
 class x_and_ref
 {
