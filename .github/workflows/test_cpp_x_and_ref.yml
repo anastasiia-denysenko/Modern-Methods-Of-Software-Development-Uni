@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compile tests
-      run: make test CXX=g++
+      run: test CXX=g++
     - name: run main
       run: lab_4\main.cpp
     - name: run a.exe
