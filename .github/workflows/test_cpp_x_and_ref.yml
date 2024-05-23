@@ -19,3 +19,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: run main
       run: lab_4\main.cpp
+    - name: run a.exe
+      run: lab_4\a.exe
