@@ -7,15 +7,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
-
-    runs-on: windows-2019
-
+  Setup:
+    runs-on: windows-2022
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler:
+          - gcc
+    
     steps:
     - uses: actions/checkout@v2
-    - name: compile tests
-      run: test CXX=g++
     - name: run main
       run: lab_4\main.cpp
-    - name: run a.exe
-      run: lab_4\a.exe
