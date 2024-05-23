@@ -22,8 +22,5 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-
-      - name: Install mock
-        run: pip install mock
       - name: Test ROT13
         run: lab_2/ROT_13_test.py
