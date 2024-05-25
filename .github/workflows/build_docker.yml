@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: anastasiia-denysenko/plot_line:latest
+          tags: anastasiiadenysenko/Modern-Methods-Of-Software-Development-Uni:latest
