@@ -18,7 +18,13 @@ jobs:
 
     steps:
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
+        id: qemu
+        uses: ./
+        with:
+          image: ${{ matrix.image }}
+          platforms: ${{ matrix.platforms }}
+      - name: Available platforms
+        run: echo ${{ steps.qemu.outputs.platforms }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Checkout repository
