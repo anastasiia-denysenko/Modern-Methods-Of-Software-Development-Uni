@@ -1,9 +1,14 @@
 from plot_line import counting, quick_sort
-import pytest
+import unittest
 import random
-def test_sort():
+class TestStringMethods(unittest.TestCase):
+    def test_sort(self):
     a = random.sample(range(-1000, 1000), 10)
     n = a.copy()
     a.sort()
     quick_sort(n, 0, len(n)-1)
-    assert a==n
+    self.assertEqual(a,n)
+
+if __name__ == '__main__':
+    unittest.main()
+
