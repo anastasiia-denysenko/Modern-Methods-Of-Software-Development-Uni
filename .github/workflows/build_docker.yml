@@ -22,15 +22,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build and export
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          load: true
-          tags: ${{ env.TEST_TAG }}
-      - name: Test
-        run: |
-          docker run --rm ${{ env.TEST_TAG }} 
+      - name: Build Docker image 
+        run: docker build -t plot_line .
+      - name: Run tests inside the container
+        run: docker run plot_line test_sorting run pytest
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
