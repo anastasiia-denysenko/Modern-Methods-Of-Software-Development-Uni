@@ -4,5 +4,4 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 CMD [ "python", "./plot_line.py" ]
-COPY test_sort.py
 CMD [ "python", "./test_sort.py" ]
