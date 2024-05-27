@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - 'branch_for_docker'
-env:
-  TEST_TAG: /usr/src/app:test_sorting
-
 jobs:
   docker:
     runs-on: ubuntu-latest
