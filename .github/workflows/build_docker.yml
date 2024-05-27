@@ -22,7 +22,7 @@ jobs:
       - name: Build Docker image 
         run: docker build -t plot_line .
       - name: Run tests inside the container
-        run: docker run test_sorting run pytest
+        run: docker run file_with_plot test_sorting run pytest
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
