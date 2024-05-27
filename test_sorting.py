@@ -1,7 +1,7 @@
 from plot_line import counting, quick_sort
-import unittest2
+import unittest
 import random
-class Test(unittest2.TestCase):
+class Test(unittest.TestCase):
     def test_sort(self):
         a = random.sample(range(-1000, 1000), 10)
         n = a.copy()
@@ -10,5 +10,5 @@ class Test(unittest2.TestCase):
         self.assertEqual(a,n)
 
 if __name__ == '__main__':
-    unittest2.main()
+    unittest.main()
 
