@@ -21,9 +21,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image 
         run: docker build -t plot_line .
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: anastasiiadenysenko/modern-methods-of-software-development-uni:latest
+      - name: Run container
+        run: docker run plot_line
