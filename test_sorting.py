@@ -1,4 +1,4 @@
-import plot_line
+from plot_line import counting, quick_sort
 import pytest
 def test_sort():
     a = random.sample(range(-1000, 1000), 10)
