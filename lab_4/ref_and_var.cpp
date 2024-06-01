@@ -4,5 +4,5 @@ class x_and_ref
 {
     public:
         int x = 5; // x - змінна
-        int& ref = x; // j is a reference variable for i
+        int& ref = x; // ref is a reference variable for x
 };
