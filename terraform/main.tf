@@ -2,11 +2,11 @@ resource "aws_s3_bucket" "bucket" {
   bucket = "terracottabucketpleasework"
 }
 
-resource "aws_lambda_function" "scriipt" {
+resource "aws_lambda_function" "script" {
   filename = "script.zip"
   role = aws_iam_role.lambda_role.arn
-  function_name = "scriipt"
-  handler = "scriipt.scriipt"
+  function_name = "script"
+  handler = "script.script"
   runtime = "python3.8"
 }
 
@@ -31,7 +31,7 @@ resource "aws_dynamodb_table" "dynamodbtable" {
 resource "aws_s3_bucket_notification" "aws-lambda-trigger" {
   bucket = "${aws_s3_bucket.bucket.id}"
   lambda_function {
-    lambda_function_arn = "${aws_lambda_function.scriipt.arn}"
+    lambda_function_arn = "${aws_lambda_function.script.arn}"
     events = ["s3:ObjectCreated:*"]
 
   }
