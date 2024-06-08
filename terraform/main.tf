@@ -1,0 +1,87 @@
+resource "aws_s3_bucket" "bucket" {
+  bucket = "terracottabucketpleasework"
+}
+
+resource "aws_lambda_function" "scriipt" {
+  filename = "script.zip"
+  role = aws_iam_role.lambda_role.arn
+  function_name = "scriipt"
+  handler = "scriipt.scriipt"
+  runtime = "python3.8"
+}
+
+resource "aws_dynamodb_table" "dynamodbtable" {
+  name = "MYTerracottaTableNamePleaseWork"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key = "id"
+  range_key = "filename"
+  attribute {
+    name = "id"
+    type = "S"
+  }
+
+  attribute {
+    name = "filename"
+    type = "S"
+  }
+
+}
+
+
+resource "aws_s3_bucket_notification" "aws-lambda-trigger" {
+  bucket = "${aws_s3_bucket.bucket.id}"
+  lambda_function {
+    lambda_function_arn = "${aws_lambda_function.scriipt.arn}"
+    events = ["s3:ObjectCreated:*"]
+
+  }
+ depends_on = [aws_lambda_permission.test]
+}
+
+
+resource "aws_lambda_permission" "test" {
+  statement_id  = "PermisiionForExecutionFromS3BucketTerracotta"
+  action        = "lambda:InvokeFunction"
+  function_name = "script"
+  principal     = "s3.amazonaws.com"
+  source_arn    = "arn:aws:s3:::${aws_s3_bucket.bucket.id}"
+}
+
+
+resource "aws_iam_role" "lambda_role" {
+  name = "my_new_lambda_role_terracotta_please_work"
+
+assume_role_policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "lambda.amazonaws.com"
+        },
+        "Action": "*"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_iam_role_policy" "revoke_keys_role_policy" {
+  name = "lambda_iam_policy_teracotta"
+  role = "${aws_iam_role.lambda_role.id}"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1687200984534",
+      "Action": "*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+EOF
+}
