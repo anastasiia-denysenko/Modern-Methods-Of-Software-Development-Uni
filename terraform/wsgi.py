@@ -20,7 +20,7 @@ def upload_file():
 	s3client = boto3.client("s3", region_name="us-east-1", endpoint_url = ENDPOINT_URL_,aws_access_key_id="test",aws_secret_access_key="test")
 	file_filename = str(f.filename)
 	s3client.upload_file(file_filename, "terracottabucketpleasework", file_filename)
-	return "uploaded" 
+	return "The file was uploaded" 
 
 
 @app.route('/view')

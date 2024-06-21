@@ -5,7 +5,7 @@ import urllib
 
 endpointurl = "http://localstack:4566"
 def script(event,context):
-        clientd = boto3.client('dynamodb',region_name='us-east-1',endpoint_url=endpointurl)
+	clientd = boto3.client('dynamodb',region_name='us-east-1',endpoint_url=endpointurl)
 	bucket_name = event['Records'][0]['s3']['bucket']['name']
 	key = event['Records'][0]['s3']['object']['key']
 	key = urllib.parse.unquote_plus(key, encoding ='utf-8')

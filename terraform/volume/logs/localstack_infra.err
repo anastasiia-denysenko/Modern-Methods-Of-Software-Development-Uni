@@ -1,9 +1,144 @@
 SERVICES variable is ignored if EAGER_SERVICE_LOADING=0.
-2024-06-08T09:59:04.961  WARN --- [-functhread5] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
-2024-06-08T09:59:04.961  WARN --- [-functhread5] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
-2024-06-08T09:59:04.967  INFO --- [-functhread5] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
-2024-06-08T09:59:04.967  INFO --- [-functhread5] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
-2024-06-08T09:59:05.039  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 1679.94ms
-2024-06-08T09:59:30.484  INFO --- [functhread12] l.services.motoserver      : starting moto server on http://0.0.0.0:55493
-2024-06-08T09:59:30.485  INFO --- [   asgi_gw_0] localstack.services.infra  : Starting mock S3 service on http port 4566 ...
-2024-06-08T09:59:30.978  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 404 (NoSuchBucket)
+2024-06-21T12:14:23.223  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-06-21T12:14:23.223  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+2024-06-21T12:14:23.228  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-06-21T12:14:23.228  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+2024-06-21T12:14:23.340  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 6256.96ms
+2024-06-21T12:16:18.458  INFO --- [functhread21] l.services.motoserver      : starting moto server on http://0.0.0.0:37325
+2024-06-21T12:16:18.462  INFO --- [   asgi_gw_2] localstack.services.infra  : Starting mock S3 service on http port 4566 ...
+2024-06-21T12:16:18.527  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.CreateRole => 200
+2024-06-21T12:16:18.559  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.GetRole => 200
+2024-06-21T12:16:18.575  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.ListRolePolicies => 200
+2024-06-21T12:16:18.589  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.ListAttachedRolePolicies => 200
+2024-06-21T12:16:18.627  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.PutRolePolicy => 200
+2024-06-21T12:16:18.663  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.GetRolePolicy => 200
+2024-06-21T12:16:18.678  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS iam.GetRolePolicy => 200
+2024-06-21T12:16:18.764  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "_load_service_plugin" took 691.01ms
+2024-06-21T12:16:19.085  INFO --- [functhread30] l.services.dynamodb.server : Initializing DynamoDB Local with the following configuration:
+2024-06-21T12:16:19.085  INFO --- [functhread30] l.services.dynamodb.server : Port:	55525
+2024-06-21T12:16:19.085  INFO --- [functhread30] l.services.dynamodb.server : InMemory:	false
+2024-06-21T12:16:19.085  INFO --- [functhread30] l.services.dynamodb.server : DbPath:	/var/lib/localstack/tmp/state/dynamodb
+2024-06-21T12:16:19.085  INFO --- [functhread30] l.services.dynamodb.server : SharedDb:	true
+2024-06-21T12:16:19.086  INFO --- [functhread30] l.services.dynamodb.server : shouldDelayTransientStatuses:	false
+2024-06-21T12:16:19.086  INFO --- [functhread30] l.services.dynamodb.server : CorsParams:	null
+2024-06-21T12:16:19.137  INFO --- [functhread30] l.services.dynamodb.server : 
+2024-06-21T12:16:19.140  INFO --- [   asgi_gw_2] localstack.utils.bootstrap : Execution of "require" took 1043.24ms
+2024-06-21T12:16:19.158  INFO --- [   asgi_gw_3] localstack.services.infra  : Starting mock Lambda service on http port 4566 ...
+2024-06-21T12:16:19.169  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.HeadBucket => 404 (404)
+2024-06-21T12:16:19.193  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CreateBucket => 200
+2024-06-21T12:16:19.205  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-06-21T12:16:19.218  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-06-21T12:16:19.231  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketPolicy => 404 (NoSuchBucketPolicy)
+2024-06-21T12:16:19.263  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketAcl => 200
+2024-06-21T12:16:19.288  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketCors => 404 (NoSuchCORSConfiguration)
+2024-06-21T12:16:19.297  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketWebsite => 404 (NoSuchWebsiteConfiguration)
+2024-06-21T12:16:19.309  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketVersioning => 200
+2024-06-21T12:16:19.318  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketAccelerateConfiguration => 200
+2024-06-21T12:16:19.339  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketRequestPayment => 200
+2024-06-21T12:16:19.353  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketLogging => 200
+2024-06-21T12:16:19.372  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketLifecycleConfiguration => 404 (NoSuchLifecycleConfiguration)
+2024-06-21T12:16:19.391  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketReplication => 404 (ReplicationConfigurationNotFoundError)
+2024-06-21T12:16:19.400  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.GetBucketEncryption => 404 (ServerSideEncryptionConfigurationNotFoundError)
+2024-06-21T12:16:19.409  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetObjectLockConfiguration => 404 (ObjectLockConfigurationNotFoundError)
+2024-06-21T12:16:19.417  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-06-21T12:16:19.425  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketTagging => 404 (NoSuchTagSet)
+2024-06-21T12:16:19.751  INFO --- [   asgi_gw_3] localstack.utils.bootstrap : Execution of "require" took 1089.76ms
+2024-06-21T12:16:19.956  INFO --- [   asgi_gw_2] localstack.utils.bootstrap : Execution of "require" took 502.00ms
+2024-06-21T12:16:19.983  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS lambda.AddPermission => 201
+2024-06-21T12:16:20.000  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS lambda.GetPolicy => 200
+2024-06-21T12:16:20.038  INFO --- [   asgi_gw_1] localstack.utils.bootstrap : Execution of "require" took 1965.30ms
+2024-06-21T12:16:20.169  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.CreateTable => 200
+2024-06-21T12:16:20.197  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:16:20.222  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:16:20.235  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.DescribeContinuousBackups => 400 (UnknownOperationException)
+2024-06-21T12:16:20.240  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.DescribeTimeToLive => 200
+2024-06-21T12:16:20.244  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.ListTagsOfResource => 200
+2024-06-21T12:16:20.256  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS lambda.CreateFunction => 200
+2024-06-21T12:16:20.263  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-06-21T12:16:25.286  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-06-21T12:16:25.300  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-06-21T12:16:25.311  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS lambda.ListVersionsByFunction => 200
+2024-06-21T12:16:25.319  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS lambda.GetFunctionCodeSigningConfig => 200
+2024-06-21T12:16:25.354  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutBucketNotificationConfiguration => 200
+2024-06-21T12:16:25.359  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.GetBucketNotificationConfiguration => 200
+2024-06-21T12:16:25.365  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS s3.GetBucketNotificationConfiguration => 200
+2024-06-21T12:16:48.827  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 200
+2024-06-21T12:16:48.831  INFO --- [functhread85] l.u.container_networking   : Determined main container network: terraform_default
+2024-06-21T12:16:48.839  INFO --- [functhread85] l.u.container_networking   : Determined main container target IP: 172.23.0.3
+2024-06-21T12:16:48.839  INFO --- [functhread85] l.s.a.lambda_executors     : Running lambda: arn:aws:lambda:us-east-1:000000000000:function:script
+2024-06-21T12:16:57.213  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:16:58.610  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:17:16.537  INFO --- [functhread85] l.s.a.lambda_executors     : writing log to file '/var/lib/localstack/tmp/lambda_7kkxfzd2.log'
+2024-06-21T12:17:16.590  INFO --- [functhread85] localstack.utils.threads   : Thread run method <function LambdaExecutor.execute.<locals>.do_execute at 0xffff492a1990>(None) failed: Lambda process returned with error. Result: {"errorType":"Runtime.UserCodeSyntaxError","errorMessage":"Syntax error in module 'script': inconsistent use of tabs and spaces in indentation (script.py, line 9)","stackTrace":["  File \"/var/task/script.py\" Line 9\n    \tbucket_name = event['Records'][0]['s3']['bucket']['name']\n"]}. Output:
+[32mSTART RequestId: 134aed50-bf94-14d4-9799-fcf801a80837 Version: $LATEST[0m
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'script': inconsistent use of tabs and spaces in indentation (script.py, line 9)
+Traceback (most recent call last):
+  File "/var/task/script.py" Line 9
+    	bucket_name = event['Records'][0]['s3']['bucket']['name']
+[32mEND RequestId: 134aed50-bf94-14d4-9799-fcf801a80837[0m
+[32mREPORT RequestId: 134aed50-bf94-14d4-9799-fcf801a80837	Init Duration: 819.56 ms	Duration: 41.39 ms	Billed Duration: 42 ms	Memory Size: 1536 MB	Max Memory Used: 43 MB	[0m Traceback (most recent call last):
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 667, in run_lambda_executor
+    result, log_output = self.execute_in_container(
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 1295, in execute_in_container
+    return DOCKER_CLIENT.start_container(
+  File "/opt/code/localstack/localstack/utils/container_utils/docker_sdk_client.py", line 473, in start_container
+    raise ContainerException(
+localstack.utils.container_utils.container_client.ContainerException: Docker container returned with exit code 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/code/localstack/localstack/utils/threads.py", line 58, in run
+    result = self.func(self.params, **kwargs)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 484, in do_execute
+    return _run(func_arn=func_arn)
+  File "/opt/code/localstack/localstack/utils/cloudwatch/cloudwatch_util.py", line 183, in wrapped
+    raise e
+  File "/opt/code/localstack/localstack/utils/cloudwatch/cloudwatch_util.py", line 179, in wrapped
+    result = func(*args, **kwargs)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 471, in _run
+    raise e
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 467, in _run
+    result = self._execute(lambda_function, inv_context)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 790, in _execute
+    result = self.run_lambda_executor(lambda_function=lambda_function, inv_context=inv_context)
+  File "/opt/code/localstack/localstack/services/awslambda/lambda_executors.py", line 712, in run_lambda_executor
+    raise InvocationException(
+localstack.services.awslambda.lambda_executors.InvocationException: Lambda process returned with error. Result: {"errorType":"Runtime.UserCodeSyntaxError","errorMessage":"Syntax error in module 'script': inconsistent use of tabs and spaces in indentation (script.py, line 9)","stackTrace":["  File \"/var/task/script.py\" Line 9\n    \tbucket_name = event['Records'][0]['s3']['bucket']['name']\n"]}. Output:
+[32mSTART RequestId: 134aed50-bf94-14d4-9799-fcf801a80837 Version: $LATEST[0m
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'script': inconsistent use of tabs and spaces in indentation (script.py, line 9)
+Traceback (most recent call last):
+  File "/var/task/script.py" Line 9
+    	bucket_name = event['Records'][0]['s3']['bucket']['name']
+[32mEND RequestId: 134aed50-bf94-14d4-9799-fcf801a80837[0m
+[32mREPORT RequestId: 134aed50-bf94-14d4-9799-fcf801a80837	Init Duration: 819.56 ms	Duration: 41.39 ms	Billed Duration: 42 ms	Memory Size: 1536 MB	Max Memory Used: 43 MB	[0m
+
+2024-06-21T12:17:21.663  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:17:21.707  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:17:21.750  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:17:21.784  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:17:21.786  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:18:16.941  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.ListObjects => 404 (NoSuchBucket)
+2024-06-21T12:22:59.196  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:23:04.855  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:23:04.897  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:23:07.416  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:23:07.457  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:23:08.545  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T12:23:08.580  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T12:30:39.060  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T14:09:38.481  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T15:17:07.778  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T16:15:41.267  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T16:15:42.984  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:21:15.449  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:21:16.640  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:21:17.456  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:21:44.579  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.ListTables => 200
+2024-06-21T22:21:44.655  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T22:21:46.179  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T22:21:46.229  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:21:46.256  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T22:21:46.270  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS dynamodb.DescribeTable => 200
+2024-06-21T22:21:46.274  INFO --- [   asgi_gw_2] localstack.request.aws     : AWS dynamodb.Scan => 200
+2024-06-21T22:22:05.185  INFO --- [   asgi_gw_3] localstack.request.aws     : AWS dynamodb.Scan => 200

@@ -11,7 +11,7 @@ resource "aws_lambda_function" "script" {
 }
 
 resource "aws_dynamodb_table" "dynamodbtable" {
-  name = "MYTerracottaTableNamePleaseWork"
+  name = "MYTerracottsaTableNamePleaseWork"
   billing_mode = "PAY_PER_REQUEST"
   hash_key = "id"
   range_key = "filename"
