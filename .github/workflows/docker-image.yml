@@ -24,7 +24,7 @@ jobs:
         run: docker build -t terraform-app .
       - name: Run container
         working-directory: ./terraform
-        run: docker run terraform
+        run: docker run terraform-app
       - name: Init terraform
         working-directory: ./terraform
         run: tflocal init
