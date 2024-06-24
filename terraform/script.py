@@ -2,7 +2,6 @@ import boto3
 import uuid
 import urllib
 
-
 endpointurl = "http://localstack:4566"
 def script(event,context):
 	clientd = boto3.client('dynamodb',region_name='us-east-1',endpoint_url=endpointurl)
@@ -12,5 +11,5 @@ def script(event,context):
 	message = "File got uploaded" + key + 'to the bucket' + bucket_name
 	id_db = uuid.uuid4()
 	idval = str(id_db)
-	clientd.put_item(TableName='MYTerracottaTableNamePleaseWork',Item={'id':{'S':idval},'filename':{'S':key}})
+	clientd.put_item(TableName='myterracottsatablepleasework',Item={'id':{'S':idval},'filename':{'S':key}})
 	return "success"

@@ -11,7 +11,7 @@ resource "aws_lambda_function" "script" {
 }
 
 resource "aws_dynamodb_table" "dynamodbtable" {
-  name = "MYTerracottsaTableNamePleaseWork"
+  name = "myterracottsatablepleasework"
   billing_mode = "PAY_PER_REQUEST"
   hash_key = "id"
   range_key = "filename"
@@ -40,7 +40,7 @@ resource "aws_s3_bucket_notification" "aws-lambda-trigger" {
 
 
 resource "aws_lambda_permission" "test" {
-  statement_id  = "PermisiionForExecutionFromS3BucketTerracotta"
+  statement_id  = "permisiionforexecutionfroms3bucketterracotta"
   action        = "lambda:InvokeFunction"
   function_name = "script"
   principal     = "s3.amazonaws.com"
@@ -50,17 +50,16 @@ resource "aws_lambda_permission" "test" {
 
 resource "aws_iam_role" "lambda_role" {
   name = "my_new_lambda_role_terracotta_please_work"
-
-assume_role_policy = <<EOF
+  assume_role_policy = <<EOF
 {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Effect": "Allow",
-        "Principal": {
-          "Service": "lambda.amazonaws.com"
-        },
-        "Action": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": "*"
     }
   ]
 }

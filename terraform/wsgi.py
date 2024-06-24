@@ -10,8 +10,6 @@ app: Flask = Flask(__name__)
 def homepage():
 	return render_template('frontend.html')
 
-
-
 @app.route('/upload', methods = ["POST"])
 def upload_file():
 	f = request.files["file"]
@@ -27,7 +25,7 @@ def upload_file():
 def view():
         ENDPOINT_URL_ = 'http://localstack:4566'
         dclient = boto3.client("dynamodb", region_name="us-east-1", endpoint_url = ENDPOINT_URL_,aws_access_key_id="test",aws_secret_access_key="test")
-        jresponsearray = dclient.scan(TableName="MYTerracottaTableNamePleaseWork")
+        jresponsearray = dclient.scan(TableName="myterracottsatablepleasework")
         itemlist = jresponsearray["Items"]
         jsonlist = []
         for i in range(len(itemlist)):

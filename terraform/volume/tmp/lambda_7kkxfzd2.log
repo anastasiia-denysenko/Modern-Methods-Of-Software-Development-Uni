@@ -1,7 +1,0 @@
-[32mSTART RequestId: 134aed50-bf94-14d4-9799-fcf801a80837 Version: $LATEST[0m
-[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'script': inconsistent use of tabs and spaces in indentation (script.py, line 9)
-Traceback (most recent call last):
-  File "/var/task/script.py" Line 9
-    	bucket_name = event['Records'][0]['s3']['bucket']['name']
-[32mEND RequestId: 134aed50-bf94-14d4-9799-fcf801a80837[0m
-[32mREPORT RequestId: 134aed50-bf94-14d4-9799-fcf801a80837	Init Duration: 819.56 ms	Duration: 41.39 ms	Billed Duration: 42 ms	Memory Size: 1536 MB	Max Memory Used: 43 MB	[0m
