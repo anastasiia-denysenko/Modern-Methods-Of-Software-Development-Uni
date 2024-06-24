@@ -21,10 +21,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image 
         working-directory: ./terraform
-        run: docker build -t terraform-app .
-      - name: Run container
-        working-directory: ./terraform
-        run: docker run terraform-app-1
+        run: docker-compose up -d --build
       - name: Init terraform
         working-directory: ./terraform
         run: tflocal init
