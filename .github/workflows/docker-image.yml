@@ -1,4 +1,4 @@
-name: Create and publish a Docker image
+name: Docker image for localstack app
 
 on:
   push:
@@ -22,10 +22,8 @@ jobs:
       - name: Build Docker image 
         working-directory: ./terraform
         run: docker-compose up -d --build
-      - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: latest
+      - name: Set up tflocal
+        run: pip install terraform-local
       - name: Init terraform
         working-directory: ./terraform
         run: tflocal init
