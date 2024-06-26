@@ -1,0 +1,10 @@
+FROM python:3.10
+
+WORKDIR /usr/src/app
+
+ADD plot_line.py .
+ADD test_sorting.py .
+
+RUN pip install psutil
+
+CMD ["python", "-m", "unittest", "test_sorting.py"]
