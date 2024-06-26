@@ -23,15 +23,15 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/plot_line:v1
       - name: Run Docker container
-        run: docker run plot_line:latest
+        run: docker run plot_line:v1
 
       - name: Build Docker image (test)
-        run: docker build -t plot_line:latest -f Dockerfile.test .
+        run: docker build -t plot_line:v1 -f Dockerfile.test .
 
       - name: Push test Docker image to GitHub Container Registry
-        run: docker push plot_line:latest
+        run: docker push plot_line:v1
 
       - name: Run tests in Docker container
-        run: docker run plot_line:latest
+        run: docker run plot_line:v1
