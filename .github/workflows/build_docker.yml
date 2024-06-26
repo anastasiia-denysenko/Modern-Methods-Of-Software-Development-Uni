@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Login
-        run: docker login ghcr.io --anastasiia-denysenko https://github.com/anastasiia-denysenko
+        run: docker login ghcr.io -u anastasiia-denysenko -p ${{ THIS_SERCRETS_NAME_IS_LILY }}
       - name: Build Docker image
         run: docker build . --tag ghcr.io/anastasiia-denysenko/plot_line:v1
       
