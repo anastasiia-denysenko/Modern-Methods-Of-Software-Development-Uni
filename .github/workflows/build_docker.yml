@@ -20,16 +20,16 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image
-        run: docker build . --tag ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:v1
+        run: docker build . --tag ghcr.io/${{ secrets.THIS_SERCRETS_NAME_IS_LILY }}/plot_line:v1
       
       - name: Push Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:v1
+        run: docker push ghcr.io/${{ secrets.THIS_SERCRETS_NAME_IS_LILY }}/plot_line:v1
 
       - name: Build Docker image (test)
-        run: docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line_test:v1 -f Dockerfile.test .
+        run: docker build -t ghcr.io/${{ secrets.THIS_SERCRETS_NAME_IS_LILY }}/plot_line_test:v1 -f Dockerfile.test .
 
       - name: Push test Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ secrets.DOCKER_NAME }}/plot_line_test:v1
+        run: docker push ghcr.io/${{ secrets.THIS_SERCRETS_NAME_IS_LILY }}/plot_line_test:v1
 
       - name: Run tests in Docker container
-        run: docker run ghcr.io/${{ secrets.DOCKER_NAME }}/plot_line_test:v1
+        run: docker run ghcr.io/${{ secrets.THIS_SERCRETS_NAME_IS_LILY }}/plot_line_test:v1
