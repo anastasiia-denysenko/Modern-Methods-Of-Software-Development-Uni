@@ -1,7 +1,7 @@
 provider "aws" {
     access_key = "test"
     secret_key = "test"
-    region = "us-east-1"
+    region = "eu-central-1"
     skip_credentials_validation = true
     skip_metadata_api_check = true
     skip_requesting_account_id  = true
@@ -12,12 +12,12 @@ provider "aws" {
     }
 }
 
-resource "aws_s3_bucket" "s3start" {
-  bucket = "s3start"
+resource "aws_s3_bucket" "mys3start" {
+  bucket = "mys3start"
 }
 
-resource "aws_s3_bucket" "s3finish" {
-  bucket = "s3finish"
+resource "aws_s3_bucket" "mys3finish" {
+  bucket = "mys3finish"
 }
 
 
@@ -54,7 +54,7 @@ resource "aws_lambda_function" "test_lambda" {
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "s3_start_lifecycle" {
-  bucket = aws_s3_bucket.s3start.id
+  bucket = aws_s3_bucket.mys3start.id
 
   rule {
     id = "move_to_s3_finish"
@@ -73,7 +73,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "s3_start_lifecycle" {
   
 }
 resource "aws_s3_bucket_notification" "s3_start_notification" {
-  bucket = aws_s3_bucket.s3start.id
+  bucket = aws_s3_bucket.mys3start.id
 
   lambda_function {
     lambda_function_arn = aws_lambda_function.test_lambda.arn
