@@ -25,13 +25,13 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/plot_line:latest
       - name: Run Docker container
-        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+        run: docker run plot_line:latest
 
       - name: Build Docker image (test)
-        run: docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:latest -f Dockerfile.test .
+        run: docker build -t plot_line:latest -f Dockerfile.test .
 
       - name: Push test Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+        run: docker push plot_line:latest
 
       - name: Run tests in Docker container
-        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+        run: docker run plot_line:latest
