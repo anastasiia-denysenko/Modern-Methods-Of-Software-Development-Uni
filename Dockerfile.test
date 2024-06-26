@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ADD plot_line.py .
 ADD test_sorting.py .
-
-RUN pip install psutil
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "-m", "unittest", "test_sorting.py"]
