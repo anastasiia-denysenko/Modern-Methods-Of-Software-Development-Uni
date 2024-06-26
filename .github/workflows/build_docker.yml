@@ -23,15 +23,15 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/file_with_plot:latest
       - name: Run Docker container
-        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line:latest
+        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/file_with_plot:latest
 
       - name: Build Docker image (test)
-        run: docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line_test:latest -f Dockerfile.test .
+        run: docker build -t ghcr.io/${{ secrets.DOCKER_USERNAME }}/file_with_plot_test:latest -f Dockerfile.test .
 
       - name: Push test Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line_test:latest
+        run: docker push ghcr.io/${{ secrets.DOCKER_USERNAME }}/file_with_plot_test:latest
 
       - name: Run tests in Docker container
-        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/plot_line_test:latest
+        run: docker run ghcr.io/${{ secrets.DOCKER_USERNAME }}/file_with_plot_test:latest
